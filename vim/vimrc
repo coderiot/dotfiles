@@ -1,0 +1,106 @@
+" pathogen
+call pathogen#infect()
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+" no vi compability
+set nocompatible
+
+" use utf8 as encoding
+set encoding=utf-8
+set fileencoding=utf-8
+
+" appearance options
+set t_Co=256
+colorscheme molokai
+
+" highlight current line
+set cursorline
+
+" show hidden symbols
+set list
+set listchars=tab:▸\ ,eol:¬
+
+" map <leader> to ,
+let mapleader = ","
+
+" show title
+set title
+
+" show line numbers
+set number
+
+" size of line numbers
+set numberwidth=3
+
+" keep 5 lines around cursor
+set scrolloff=5
+
+" syntax highlighting
+syntax on
+
+" enable auto indentation
+set autoindent
+"set smartindent
+
+" use the appropriate number of spaces to insert a <Tab>
+set expandtab
+
+"search incremently
+set incsearch
+set ignorecase
+
+" Enable filetype plugin
+filetype plugin on
+filetype indent on
+
+" Auto-Completion
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+" Python
+au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
+
+" close doc window automatically
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" highlight trailing whitespace as errors
+au Syntax * match Error /\s\+\%#\@<!$/
+
+" code folding
+set foldmethod=indent
+set foldlevel=99
+set foldminlines=5
+
+" map - to fold code
+nmap - zc
+
+" map + to unfold code
+nmap + zo
+
+set pastetoggle=<F2>
+
+"""""""""""
+" Plugins "
+"""""""""""
+
+" NERDTree settings
+let NERDTreeQuitOnOpen=1
+let NERDTreeShowBookmarks=1
+map <F3> :NERDTreeToggle<CR>
+
+" tagbar settings
+let g:tagbar_width = 25
+let g:tagbar_autoclose=1
+let g:tagbar_left=1
+let g:tagbar_foldlevel=0
+
+map <silent> <F4> :TagbarToggle<CR>
+
+" SuperTab settings
+let g:SuperTabDefaultCompletionType = "context"
+
+" syntastic
+let g:syntastic_enable_signs=0
+let g:syntastic_loc_list_height=5
+let g:syntastic_auto_jump=0
