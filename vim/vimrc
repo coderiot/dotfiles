@@ -50,15 +50,20 @@ set expandtab
 set incsearch
 set ignorecase
 
+" command-line completion operates in an enhanced mode
+set wildmenu
+
 " Enable filetype plugin
 filetype plugin on
 filetype indent on
 
-" Auto-Completion
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-
 " Python
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
+
+" Python Auto-Completion
+autocmd FileType python setlocal omnifunc=RopeCompleteFunc
+
+set completeopt=longest,menu,menuone,preview
 
 " close doc window automatically
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
@@ -99,6 +104,7 @@ map <silent> <F4> :TagbarToggle<CR>
 
 " SuperTab settings
 let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
 " syntastic
 let g:syntastic_enable_signs=0
