@@ -5,5 +5,5 @@ alias v='vim'
 # open dir and list dirs
 function cdl() {
         cd "$1"
-        ls -d */
+        dir
 }
