@@ -70,7 +70,12 @@ set completeopt=longest,menu,menuone,preview
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-" highlight trailing whitespace as errors
+" maximum number of items to show in the popup menu for
+" Insert mode completion
+set pumheight=5
+
+" Highlight trailing whitespace in vim on non empty lines,
+" but not while typing in insert mode!
 au Syntax * match Error /\s\+\%#\@<!$/
 
 " code folding
@@ -86,6 +91,10 @@ nmap + zo
 
 set pastetoggle=<F2>
 
+
+" change :W to :w on cmd
+cnoreabbrev W w
+
 """""""""""
 " Plugins "
 """""""""""
@@ -100,14 +109,21 @@ let g:tagbar_width = 25
 let g:tagbar_autoclose=1
 let g:tagbar_left=1
 let g:tagbar_foldlevel=0
+" Don't sort tags by name
+let g:tagbar_sort = 0
 
 map <silent> <F4> :TagbarToggle<CR>
 
 " SuperTab settings
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+" Set backwards mapping to work with snipmate's reverse tabstops
+let g:SuperTabMappingBackward ='<C-Tab>'
 
 " syntastic
 let g:syntastic_enable_signs=0
 let g:syntastic_loc_list_height=5
 let g:syntastic_auto_jump=0
+
+" vim-rope: find .ropeproject in parent directories
+let g:ropevim_guess_project=1
