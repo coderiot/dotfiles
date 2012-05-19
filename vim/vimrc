@@ -41,7 +41,6 @@ syntax on
 
 " enable auto indentation
 set autoindent
-"set smartindent
 
 " use the appropriate number of spaces to insert a <Tab>
 set expandtab
@@ -62,6 +61,8 @@ au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
 
 " Python Auto-Completion
 autocmd FileType python setlocal omnifunc=RopeCompleteFunc
+" start python on <F5>
+autocmd FileType python map <F5> :w<CR>:!python "%"<CR>
 
 set completeopt=longest,menu,menuone,preview
 
