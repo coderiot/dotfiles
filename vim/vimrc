@@ -40,10 +40,13 @@ set scrolloff=5
 syntax on
 
 " enable auto indentation
-set autoindent
+"set autoindent
+set smartindent
 
 " use the appropriate number of spaces to insert a <Tab>
 set expandtab
+
+set shiftwidth=4
 
 "search incremently
 set incsearch
@@ -91,9 +94,17 @@ nmap + zo
 
 set pastetoggle=<F2>
 
+" set size of helpwindow
+set helpheight=10
 
 " change :W to :w on cmd
 cnoreabbrev W w
+
+" Tab navigation
+nmap <C-t> :tabnew<CR>
+imap <C-t> <Esc>:tabnew<CR>i
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 
 """""""""""
 " Plugins "
