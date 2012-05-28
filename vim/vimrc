@@ -23,6 +23,7 @@ set listchars=tab:▸\ ,eol:¬
 
 " map <leader> to ,
 let mapleader = ","
+let maplocalleader = ","
 
 " show title
 set title
@@ -47,6 +48,8 @@ set smartindent
 set expandtab
 
 set shiftwidth=4
+
+set tabstop=4
 
 "search incremently
 set incsearch
@@ -137,4 +140,7 @@ let g:syntastic_loc_list_height=5
 let g:syntastic_auto_jump=0
 
 " vim-rope: find .ropeproject in parent directories
-let g:ropevim_guess_project=1
+let g:ropevim_guess_project=0
+
+" Latex Box
+let g:LatexBox_latexmk_options = '-pdf -pvc'
