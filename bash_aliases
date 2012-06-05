@@ -2,6 +2,7 @@
 # start vim with v
 alias v='vim'
 alias vim='vim --servername vim'
+alias pcat='pygmentize'
 
 # open dir and list dirs
 function cdl() {
@@ -12,3 +13,5 @@ function cdl() {
 # history bindings
 bind '"\e[5~": history-search-backward'
 bind '"\e[6~": history-search-forward'
+
+bind 'set completion-ignore-case on'
