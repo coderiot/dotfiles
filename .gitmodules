@@ -44,6 +44,9 @@
 [submodule "vim/bundle/largeFile"]
 	path = vim/bundle/largeFile
 	url = https://github.com/vim-scripts/LargeFile.git
-[submodule "vim/bundle/holokai"]
-	path = vim/bundle/holokai
-	url = https://github.com/ryanc/holokai.git
+[submodule "vim/bundle/easymotion"]
+	path = vim/bundle/easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "vim/bundle/vimseek"]
+	path = vim/bundle/vimseek
+	url = https://github.com/goldfeld/vim-seek

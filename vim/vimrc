@@ -35,7 +35,7 @@ set number
 " size of line numbers
 set numberwidth=3
 
-" keep 5 lines around cursor
+" keep 5 lines around cursor, change behavior of H and L
 set scrolloff=5
 
 " syntax highlighting
@@ -62,8 +62,8 @@ set wildmenu
 " highlight all search pattern matches
 set hlsearch
 
-" <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+" <Leader>l redraws the screen and removes any search highlighting.
+nnoremap <silent> <Leader>l :nohl<CR>
 
 " Make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
@@ -128,6 +128,12 @@ imap <ESC>oB <ESC>ji
 imap <ESC>oC <ESC>li
 imap <ESC>oD <ESC>hi
 
+" quicker window switching
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 """""""""""
 " Plugins "
 """""""""""
@@ -136,6 +142,7 @@ imap <ESC>oD <ESC>hi
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowBookmarks=1
 map <F3> :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.pyc$', '\.pyo$']
 
 " tagbar settings
 let g:tagbar_width = 25
