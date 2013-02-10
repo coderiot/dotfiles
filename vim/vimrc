@@ -176,3 +176,6 @@ let g:syntastic_auto_jump=0
 
 " Latex Box for continuous background compilation
 "let g:LatexBox_latexmk_options = '-pdf -pvc'
+
+" use latexmkrc to make pdf out of svg with inkscape if missing
+let g:LatexBox_latexmk_options = '-use-make'
