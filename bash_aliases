@@ -1,8 +1,10 @@
-# add global .gitignore: git config --global core.excludesfile ~/.gitignore
 # start vim with v
 alias v='vim'
 alias vim='vim --servername vim'
 alias pcat='pygmentize'
+
+# change to parent dir
+alias cd..='cd ..'
 
 # open dir and list dirs
 function cdl() {
