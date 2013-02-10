@@ -13,6 +13,7 @@ set fileencoding=utf-8
 " appearance options
 set t_Co=256
 colorscheme molokai
+"colorscheme holokai
 
 " highlight current line
 set cursorline
@@ -58,6 +59,18 @@ set ignorecase
 " command-line completion operates in an enhanced mode
 set wildmenu
 
+" highlight all search pattern matches
+set hlsearch
+
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+" Make Y consistent with C and D.  See :help Y.
+nnoremap Y y$
+
+" backspacing over indent, end-of-line and linestart in insert mode
+set backspace=indent,eol,start
+
 " Enable filetype plugin
 filetype plugin on
 filetype indent on
@@ -66,7 +79,7 @@ filetype indent on
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
 
 " Python Auto-Completion
-autocmd FileType python setlocal omnifunc=RopeCompleteFunc
+"autocmd FileType python setlocal omnifunc=RopeCompleteFunc
 " start python on <F5>
 autocmd FileType python map <F5> :w<CR>:!python "%"<CR>
 
@@ -109,6 +122,12 @@ imap <C-t> <Esc>:tabnew<CR>i
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 
+" Fix arrow keys that display A B C D in insert mode
+imap <ESC>oA <ESC>ki
+imap <ESC>oB <ESC>ji
+imap <ESC>oC <ESC>li
+imap <ESC>oD <ESC>hi
+
 """""""""""
 " Plugins "
 """""""""""
@@ -128,6 +147,10 @@ let g:tagbar_sort = 0
 
 map <silent> <F4> :TagbarToggle<CR>
 
+" delimitMate settings
+" will not jump out of the empty pair in python
+au FileType python let b:delimitMate_nesting_quotes = ['"']
+
 " SuperTab settings
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
@@ -140,7 +163,9 @@ let g:syntastic_loc_list_height=5
 let g:syntastic_auto_jump=0
 
 " vim-rope: find .ropeproject in parent directories
-let g:ropevim_guess_project=0
+"let g:ropevim_guess_project=0
+"let ropevim_vim_completion=1
+"let ropevim_extended_complete=1
 
-" Latex Box
-let g:LatexBox_latexmk_options = '-pdf -pvc'
+" Latex Box for continuous background compilation
+"let g:LatexBox_latexmk_options = '-pdf -pvc'
