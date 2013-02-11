@@ -1,0 +1,8 @@
+[user]
+	name = peterrr
+[merge]
+	tool = vimdiff
+[core]
+	editor = vim
+[color]
+	ui = true
