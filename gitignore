@@ -1,3 +1,4 @@
+# add global .gitignore: git config --global core.excludesfile ~/.gitignore
 # Python
 *.py[cod]
 .ropeproject
@@ -7,3 +8,10 @@
 
 # Vim
 *.sw[po]
+
+# Latex
+*.fdb_latexmk
+*.aux
+*.toc
+*.snm
+*.nav
