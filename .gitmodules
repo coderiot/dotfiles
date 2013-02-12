@@ -37,6 +37,7 @@
 [submodule "vim/bundle/largeFile"]
 	path = vim/bundle/largeFile
 	url = https://github.com/vim-scripts/LargeFile.git
+    ignore = untracked
 [submodule "vim/bundle/easymotion"]
 	path = vim/bundle/easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
