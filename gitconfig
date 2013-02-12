@@ -4,5 +4,6 @@
 	tool = vimdiff
 [core]
 	editor = vim
+	excludesfile = ~/.gitingore
 [color]
 	ui = true
