@@ -134,6 +134,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" for when we forget to use sudo to open/edit a file
+cmap w!! w !sudo tee % >/dev/null
+
 """""""""""
 " Plugins "
 """""""""""
@@ -164,17 +167,13 @@ let g:SuperTabDefaultCompletionType = "context"
 " Set backwards mapping to work with snipmate's reverse tabstops
 "let g:SuperTabMappingBackward ='<C-Tab>'
 
+" UltiSnips settings
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
 
 " syntastic
 let g:syntastic_enable_signs=0
 let g:syntastic_loc_list_height=5
 let g:syntastic_auto_jump=0
-
-" vim-rope: find .ropeproject in parent directories
-"let g:ropevim_guess_project=0
-"let ropevim_vim_completion=1
-"let ropevim_extended_complete=1
 
 " Latex Box for continuous background compilation
 "let g:LatexBox_latexmk_options = '-pdf -pvc'
