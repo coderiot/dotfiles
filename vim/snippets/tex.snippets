@@ -1,7 +1,3 @@
-snippet frac
-\frac{${1:num}}{${2:denom}}
-endsnippet
-
 snippet sum
 \sum^{${1:n}}_{${2:i=1}}{${3}}
 endsnippet
@@ -10,7 +6,7 @@ snippet int
 \int^{${1:a}}_{${2:b}}{${3}}
 endsnippet
 
-snippet use
+snippet up
 \usepackage{${1:package}}
 endsnippet
 
@@ -21,3 +17,56 @@ snippet frame
 \end{frame}
 endsnippet
 
+snippet \
+\[
+    ${1}
+\]
+endsnippet
+
+snippet itd
+\item[${1:description}] ${2:item}
+endsnippet
+
+snippet it
+\item ${1:item}
+endsnippet
+
+#Formating text: italic, bold, underline, small capital, emphase ..
+snippet itt
+\textit{${1:text}}
+endsnippet
+
+snippet bf
+\textbf{${1:text}}
+endsnippet
+
+snippet under
+\underline{${1:text}}
+endsnippet
+
+snippet emp
+\emph{${1:text}}
+endsnippet
+
+snippet sc
+\textsc{${1:text}}
+endsnippet
+
+snippet svgfig
+\begin{figure}
+    \centering
+    \def\svgwitdth{${1:scale}\columnwidth}
+    \input{figures/${2}}
+    \caption{${3}}
+    \label{fig:${4}}
+\end{figure}
+endsnippet
+
+snippet fig
+\begin{figure}
+    \centering
+    \includegraphics[scale=${1}]{figures/${2}}
+    \caption{${3}}
+    \label{fig:${4}}
+\end{figure}
+endsnippet
