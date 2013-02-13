@@ -180,3 +180,8 @@ let g:syntastic_auto_jump=0
 
 " use latexmkrc to make pdf out of svg with inkscape if missing
 let g:LatexBox_latexmk_options = '-use-make'
+
+" vimwiki settings
+let g:vimwiki_list = [{}, {'path': '~/workspace/wiki', 'path_html': '~/workspace/wiki/html'}]
+
+map <Leader>wp 2<Leader>wt
