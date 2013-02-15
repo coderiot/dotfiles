@@ -163,7 +163,7 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 
 " SuperTab settings
 let g:SuperTabDefaultCompletionType = "context"
-"let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 " Set backwards mapping to work with snipmate's reverse tabstops
 "let g:SuperTabMappingBackward ='<C-Tab>'
 
