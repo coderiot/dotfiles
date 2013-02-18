@@ -184,4 +184,5 @@ let g:LatexBox_latexmk_options = '-use-make'
 " vimwiki settings
 let g:vimwiki_list = [{}, {'path': '~/workspace/wiki', 'path_html': '~/workspace/wiki/html'}]
 
+" open Projects wiki (testing)
 map <Leader>wp 2<Leader>wt
