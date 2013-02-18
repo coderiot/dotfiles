@@ -1,5 +1,6 @@
 [user]
 	name = peterrr
+	email = peterrr@github
 [merge]
 	tool = vimdiff
 [core]
