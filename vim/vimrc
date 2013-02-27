@@ -192,3 +192,4 @@ let g:vimwiki_list = [{'path_html':vimwiki_html_path,
 
 " open Projects wiki (testing)
 map <Leader>wp <ESC>:VimwikiGoto workspace/index<CR>
+map <Leader>tt <ESC>:VimwikiGoto todo<CR>
