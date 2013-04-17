@@ -53,6 +53,3 @@
 [submodule "vim/bundle/vim-ipython"]
 	path = vim/bundle/vim-ipython
 	url = https://github.com/ivanov/vim-ipython.git
-[submodule "zencoding-vim"]
-	path = zencoding-vim
-	url = git://github.com/mattn/zencoding-vim.git
