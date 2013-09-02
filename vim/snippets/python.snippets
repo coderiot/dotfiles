@@ -42,3 +42,19 @@ if __name__ == '__main__':
     status = main()
     sys.exit(status)
 endsnippet
+
+snippet setup "setup.py Template" !b
+#!/usr/bin/env python
+# encoding: utf-8
+
+from distutils.core import setup
+
+setup(name='${1:name}',
+    version='${2:0.1.0}',
+    description='${3:description}',
+    author='${4:author}',
+    author_email='${5:email}',
+    url='https://github.com/${6:author}/${7:repo}/',
+    packages=['${8:package}'],
+)
+endsnippet
