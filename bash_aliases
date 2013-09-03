@@ -6,6 +6,12 @@ alias pcat='pygmentize'
 # change to parent dir
 alias cd..='cd ..'
 
+# start vimwiki
+alias wiki='vim -c +VimwikiIndex'
+
+# start diary and create Note for today
+alias diary='vim -c +VimwikiMakeDiaryNote'
+
 # open dir and list dirs
 function cdl() {
         cd "$1"
