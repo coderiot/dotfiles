@@ -10,3 +10,6 @@
 	ui = true
 [push]
 	default = simple
+[alias]
+	st = status -s
+	ci = commit
