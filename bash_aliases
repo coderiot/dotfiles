@@ -24,6 +24,13 @@ alias py='python'
 # shortcut for ipython
 alias ipy="ipython"
 
+# syntax highlighting in  less
+function pless() {
+    pygmentize "$1" | less -R
+}
+
+alias pless=pless
+
 # history bindings
 bind '"\e[5~": history-search-backward'
 bind '"\e[6~": history-search-forward'
