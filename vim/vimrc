@@ -140,6 +140,8 @@ cmap w!! w !sudo tee % >/dev/null
 " forward delete in insert mode
 imap <C-L> <Del>
 
+" leaving insert mode fast
+inoremap ii <ESC>
 
 """""""""""
 " Plugins "
