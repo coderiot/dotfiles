@@ -1,7 +1,7 @@
 # start vim with v
 alias v='vim'
 alias vim='vim --servername vim'
-alias pcat='pygmentize'
+alias pcat='pygmentize -f terminal256 -O style=monokai -g'
 
 # change to parent dir
 alias cd..='cd ..'
@@ -26,7 +26,7 @@ alias ipy="ipython"
 
 # syntax highlighting in  less
 function pless() {
-    pygmentize "$1" | less -R
+    pcat "$1" | less -R
 }
 
 alias pless=pless
