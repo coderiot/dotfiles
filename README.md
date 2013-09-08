@@ -1,5 +1,6 @@
 ## Vim
-manage vim plugins [pathogen](https://github.com/tpope/vim-pathogen)
+- manage vim plugins with [pathogen](https://github.com/tpope/vim-pathogen)
+- colorscheme is moloka
 ### Plugins
  - [delimitMate](https://github.com/Raimondi/delimitMate.git) - auto-completetion for quotes and brackets
  - [latex-box](https://github.com/LaTeX-Box-Team/LaTeX-Box.git) - Lightweight Toolbox for LaTeX
@@ -21,3 +22,16 @@ manage vim plugins [pathogen](https://github.com/tpope/vim-pathogen)
  - [zencoding](https://github.com/mattn/zencoding-vim.git) - expanding abbreviations for html
 
 ## Bash
+history search with Page-Up and Page-Down
+### Aliases
+ - `v` - for vim, vim starts with servername option
+ - `pcat` - cat syntax highlighted files with [pygments](http://pygments.org/)
+ - `pless` - less with pygments
+ - `wiki` - open vimwiki
+ - `diary`- open vimwiki diary
+ - `py` - python
+ - `ìpy` - ipython
+
+## tmux
+
+## git
