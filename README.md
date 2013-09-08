@@ -1,6 +1,7 @@
 ## Vim
 - manage vim plugins with [pathogen](https://github.com/tpope/vim-pathogen)
-- colorscheme is moloka
+- colorscheme is molokai
+
 ### Plugins
  - [delimitMate](https://github.com/Raimondi/delimitMate.git) - auto-completetion for quotes and brackets
  - [latex-box](https://github.com/LaTeX-Box-Team/LaTeX-Box.git) - Lightweight Toolbox for LaTeX
