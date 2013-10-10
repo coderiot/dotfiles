@@ -143,6 +143,10 @@ imap <C-L> <Del>
 " leaving insert mode fast
 inoremap ii <ESC>
 
+" time in milliseconds vim wait for mapping
+" < 200 to fast for me
+set timeoutlen=200
+
 " quick save
 noremap <Leader>w :update<CR>
 
