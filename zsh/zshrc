@@ -1,0 +1,44 @@
+# .dotfiles
+export DOTFILES=$HOME/dotfiles
+
+# Configuration files
+typeset -U config_files
+config_files=($DOTFILES/zsh/*.zsh)
+
+# ZSH Configuration
+for file in ${(M)config_files:#$DOTFILES/zsh/*.zsh}
+do
+    source $file
+done
+
+# if a command is issued that can't be executed as a normal command, and the
+# command is the name of a directory, perform the cd command to that directory.
+setopt auto_cd
+
+autoload -U compinit promptinit
+compinit
+# set up a colored prompt
+promptinit
+
+# command correction
+setopt correctall
+
+# not just at the end
+setopt completeinword
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# tab complete cd ..
+zstyle ':completion:*' special-dirs true
+
+# tab completion menu
+zstyle ':completion:*' menu select
+
+TERM=xterm-256color
