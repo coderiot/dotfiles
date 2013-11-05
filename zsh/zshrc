@@ -15,10 +15,9 @@ done
 # command is the name of a directory, perform the cd command to that directory.
 setopt auto_cd
 
+# set up completion system and colored prompt
 autoload -U compinit promptinit
 compinit
-
-# set up a colored prompt
 promptinit
 
 # command correction

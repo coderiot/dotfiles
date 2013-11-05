@@ -8,7 +8,10 @@ zstyle ':completion:*' insert-tab pending
 zstyle ':completion:*' special-dirs true
 
 # tab completion menu
-zstyle ':completion:*' menu select
+zstyle ':completion:*' menu select yes
 
 # not just at the end
 setopt completeinword
+
+# Fallback to built in ls colors
+zstyle ':completion:*' list-colors ''
