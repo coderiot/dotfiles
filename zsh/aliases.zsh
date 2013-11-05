@@ -1,4 +1,5 @@
 alias v='vim'
+alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
@@ -21,7 +22,7 @@ alias py='python'
 alias ipy="ipython"
 
 # Python virtualenv shortcuts.
-alias venv-init='virtualenv venv -p /usr/local/bin/python --no-site-packages'
+alias venv-init='virtualenv venv --no-site-packages'
 alias venv-activate='source venv/bin/activate'
 
 # color ls and grep
