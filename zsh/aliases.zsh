@@ -17,3 +17,9 @@ alias diary='vim -c +VimwikiMakeDiaryNote'
 # Python virtualenv shortcuts.
 alias venv-init='virtualenv venv -p /usr/local/bin/python --no-site-packages'
 alias venv-activate='source venv/bin/activate'
+
+# color ls and grep
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
