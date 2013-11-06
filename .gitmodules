@@ -40,6 +40,7 @@
 [submodule "vim/bundle/vimseek"]
 	path = vim/bundle/vimseek
 	url = https://github.com/goldfeld/vim-seek
+    ignore = dirty
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
