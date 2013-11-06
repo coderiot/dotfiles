@@ -1,0 +1,30 @@
+# .dotfiles
+export DOTFILES=$HOME/dotfiles
+
+# Configuration files
+typeset -U config_files
+config_files=($DOTFILES/zsh/*.zsh)
+
+# ZSH Configuration
+for file in ${(M)config_files:#$DOTFILES/zsh/*.zsh}
+do
+    source $file
+done
+
+# if a command is issued that can't be executed as a normal command, and the
+# command is the name of a directory, perform the cd command to that directory.
+setopt auto_cd
+
+# set up completion system and colored prompt
+autoload -U compinit promptinit
+compinit
+promptinit
+
+# command correction
+setopt correctall
+
+# enable color support of ls
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
