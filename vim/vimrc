@@ -194,6 +194,11 @@ let g:syntastic_auto_jump=0
 " use latexmkrc to make pdf out of svg with inkscape if missing
 let g:LatexBox_latexmk_options = '-use-make'
 
+" ignore hyperref warnings
+let g:LatexBox_ignore_warnings = [
+      \ 'Package hyperref Warning',
+      \ ]
+
 " vimwiki settings
 let vimwiki_path=$HOME.'/vimwiki/'
 let vimwiki_html_path=$HOME.'/vimwiki_html/'
