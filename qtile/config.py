@@ -106,7 +106,11 @@ groups.extend([
     Group('music', layout='max', persist=False,
           matches=[Match(title=['gmusicbrowser'])]),
     Group('web', spawn='firefox', layout='max',
-          matches=[Match(wm_class=['Firefox', 'google-chrome', 'Google-chrome', "Opera"], title=["Liferea"])]),
+          matches=[Match(wm_class=['Firefox',
+                                   'google-chrome',
+                                   'Google-chrome',
+                                   "Opera"],
+                         title=["Liferea"])]),
     Group('chat', layout='pidgin', persist=False,
           matches=[Match(wm_class=['Pidgin'], role=['Buddy List'])]),
     Group('mail', layout='max', persist=False,
@@ -125,6 +129,8 @@ layouts = [
                  fallback=layout.Stack(stacks=1)),
 ]
 
+volume_icons = os.path.expanduser("~/.config/qtile/volume-icons")
+
 screens = [
     Screen(
         bottom=bar.Bar(
@@ -142,11 +148,12 @@ screens = [
         top=bar.Bar(
                     [
                         widget.Prompt(foreground="#A6E22E"),
-                        widget.WindowName(font="Droid Sans", foreground="#CCCCC6"),
+                        widget.WindowName(font="Droid Sans",
+                                          foreground="#CCCCC6"),
                         widget.Systray(),
                         widget.Volume(fontsize=20,
-                                      theme_path=os.path.expanduser("~/.config/qtile/volume-icons")),
-
+                                      theme_path=volume_icons
+                                      ),
                         widget.Clock('%a, %d %b %Y %H:%M:%S',
                                      font="Droid Sans",
                                      fontsize=15,
