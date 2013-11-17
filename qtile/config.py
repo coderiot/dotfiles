@@ -129,7 +129,8 @@ screens = [
     Screen(
         bottom=bar.Bar(
                        [
-                        widget.GroupBox(borderwidth=1,
+                        widget.GroupBox(
+                                        borderwidth=1,
                                         fontsize=12,
                                         font="DejaVu Sans",
                                         this_current_screen_border="#A6E22E",
@@ -141,7 +142,7 @@ screens = [
         top=bar.Bar(
                     [
                         widget.Prompt(foreground="#A6E22E"),
-                        widget.WindowName(font="Droid Sans"),
+                        widget.WindowName(font="Droid Sans", foreground="#CCCCC6"),
                         widget.Systray(),
                         widget.Volume(fontsize=20,
                                       theme_path=os.path.expanduser("~/.config/qtile/volume-icons")),
@@ -149,7 +150,7 @@ screens = [
                         widget.Clock('%a, %d %b %Y %H:%M:%S',
                                      font="Droid Sans",
                                      fontsize=15,
-                                     foreground="#404040"
+                                     foreground="#606060"
                                      ),
                     ],
                     25,
