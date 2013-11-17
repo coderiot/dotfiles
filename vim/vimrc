@@ -187,6 +187,11 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
 let g:syntastic_enable_signs=0
 let g:syntastic_loc_list_height=5
 let g:syntastic_auto_jump=0
+let g:syntastic_check_on_open = 1
+
+" changing colors for syntastic error and warning
+hi SpellBad term=reverse ctermfg=219 ctermbg=89 guifg=#E6DB74 guibg=#1E0010
+hi SpellCap term=reverse ctermfg=219 ctermbg=166 guifg=#FD971F guibg=#1E0010
 
 " Latex Box for continuous background compilation
 "let g:LatexBox_latexmk_options = '-pdf -pvc'
