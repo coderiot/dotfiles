@@ -71,13 +71,14 @@ keys = [
 
     # start specific apps
     Key([mod, "control"], "r", lazy.restart()),
-    Key([mod], "r", lazy.spawncmd()),
+    Key([mod], "r", lazy.spawncmd(prompt="> ")),
     Key(["mod4"], "o", lazy.spawn("opera")),
     Key(["mod4"], "f", lazy.spawn("firefox")),
     Key(["mod4"], "l", lazy.spawn("liferea")),
     Key([mod], "n", lazy.function(app_or_group("web", "firefox"))),
-    Key([mod], "m", lazy.function(app_or_group("music", "gmusicbrowser"))),
-    Key([mod], "c", lazy.function(app_or_group("chat", "pidgin")))
+    Key([mod], "g", lazy.function(app_or_group("music", "gmusicbrowser"))),
+    Key([mod], "c", lazy.function(app_or_group("chat", "pidgin"))),
+    Key([mod], "m", lazy.function(app_or_group("mail", "thunderbird"))),
 ]
 
 groups = [
@@ -108,6 +109,8 @@ groups.extend([
           matches=[Match(wm_class=['Firefox', 'google-chrome', 'Google-chrome', "Opera"], title=["Liferea"])]),
     Group('chat', layout='pidgin', persist=False,
           matches=[Match(wm_class=['Pidgin'], role=['Buddy List'])]),
+    Group('mail', layout='max', persist=False,
+          matches=[Match(wm_class=['Thunderbird'])]),
     #Group('java', persist=False,
           #matches=[Match(wm_class=['sun-awt-X11-XFramePeer', 'GroupWise'])]),
 ])
@@ -117,7 +120,7 @@ dgroups_app_rules = []
 
 layouts = [
     layout.Max(),
-    layout.Stack(stacks=2),
+    layout.Stack(stacks=2, border_focus="#9459FF", border_width=2),
     layout.Slice('right', 256, name='pidgin', role='buddy_list',
                  fallback=layout.Stack(stacks=1)),
 ]
@@ -126,13 +129,18 @@ screens = [
     Screen(
         bottom=bar.Bar(
                        [
-                        widget.GroupBox(borderwidth=3, fontsize=12, font="DejaVu Sans"),
+                        widget.GroupBox(borderwidth=1,
+                                        fontsize=12,
+                                        font="DejaVu Sans",
+                                        this_current_screen_border="#A6E22E",
+                                        active="#F7208B",
+                                        ),
                        ],
                        30,
                        ),
         top=bar.Bar(
                     [
-                        #widget.Prompt(),
+                        widget.Prompt(foreground="#A6E22E"),
                         widget.WindowName(font="Droid Sans"),
                         widget.Systray(),
                         widget.Volume(fontsize=20,
@@ -140,7 +148,9 @@ screens = [
 
                         widget.Clock('%a, %d %b %Y %H:%M:%S',
                                      font="Droid Sans",
-                                     fontsize=15),
+                                     fontsize=15,
+                                     foreground="#404040"
+                                     ),
                     ],
                     25,
                 ),
