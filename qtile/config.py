@@ -32,6 +32,18 @@ keys = [
         [mod], "j",
         lazy.layout.up()
     ),
+    Key(
+        [mod], "h",
+        lazy.layout.previous()
+    ),
+    Key(
+        [mod], "l",
+        lazy.layout.next()
+    ),
+    Key(
+        [mod], "f",
+        lazy.window.toggle_floating()
+    ),
 
     # Move windows up or down in current stack
     Key(
@@ -63,7 +75,10 @@ keys = [
         [mod, "shift"], "Return",
         lazy.layout.toggle_split()
     ),
-    Key([mod], "Return", lazy.spawn("xfce4-terminal")),
+    Key([mod], "Return", lazy.spawn("xfce4-terminal \
+                                    --hide-menubar \
+                                    --hide-borders \
+                                    --hide-toolbars")),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab",    lazy.nextlayout()),
@@ -85,8 +100,6 @@ groups = [
     Group("a"),
     Group("s"),
     Group("d"),
-    Group("f"),
-    Group("u"),
     Group("i"),
     Group("o"),
     Group("p"),
@@ -115,18 +128,24 @@ groups.extend([
           matches=[Match(wm_class=['Pidgin'], role=['Buddy List'])]),
     Group('mail', layout='max', persist=False,
           matches=[Match(wm_class=['Thunderbird'])]),
-    #Group('java', persist=False,
-          #matches=[Match(wm_class=['sun-awt-X11-XFramePeer', 'GroupWise'])]),
 ])
 
 dgroups_key_binder = None
 dgroups_app_rules = []
 
+border = {'border_normal': '#404040',
+          'border_focus': "#9459FF",
+          'border_width': 2,
+         }
+
 layouts = [
-    layout.Max(),
-    layout.Stack(stacks=2, border_focus="#9459FF", border_width=2),
+    layout.Max(**border),
+    layout.Stack(stacks=2, **border),
+    layout.Tile(**border),
+    layout.RatioTile(**border),
+    layout.MonadTall(**border),
     layout.Slice('right', 256, name='pidgin', role='buddy_list',
-                 fallback=layout.Stack(stacks=1)),
+                 fallback=layout.Stack(stacks=1, **border)),
 ]
 
 volume_icons = os.path.expanduser("~/.config/qtile/volume-icons")
@@ -136,12 +155,14 @@ screens = [
         bottom=bar.Bar(
                        [
                         widget.GroupBox(
-                                        borderwidth=1,
+                                        borderwidth=2,
                                         fontsize=12,
                                         font="DejaVu Sans",
-                                        this_current_screen_border="#A6E22E",
+                                        this_current_screen_border="#87FF03",
                                         active="#F7208B",
                                         ),
+                        widget.Spacer(),
+                        widget.CurrentLayout(foreground="#404040"),
                        ],
                        30,
                        ),
