@@ -168,7 +168,7 @@ screens = [
                        ),
         top=bar.Bar(
                     [
-                        widget.Prompt(foreground="#A6E22E"),
+                        widget.Prompt(foreground="#87FF03"),
                         widget.WindowName(font="Droid Sans",
                                           foreground="#CCCCC6"),
                         widget.Systray(),
