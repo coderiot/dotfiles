@@ -115,10 +115,11 @@ for i in groups:
         Key([mod, "shift"], i.name, lazy.window.togroup(i.name))
     )
 
+
 groups.extend([
     Group('music', layout='max', persist=False,
           matches=[Match(title=['gmusicbrowser'])]),
-    Group('web', spawn='firefox', layout='max',
+    Group('web', layout='max',
           matches=[Match(wm_class=['Firefox',
                                    'google-chrome',
                                    'Google-chrome',
@@ -144,8 +145,10 @@ layouts = [
     layout.Tile(**border),
     layout.RatioTile(**border),
     layout.MonadTall(**border),
-    layout.Slice('right', 256, name='pidgin', role='buddy_list',
-                 fallback=layout.Stack(stacks=1, **border)),
+    layout.Slice('right', 256,
+                 name='pidgin',
+                 role='buddy_list',
+                 fallback=layout.Stack(stacks=1)),
 ]
 
 volume_icons = os.path.expanduser("~/.config/qtile/volume-icons")
