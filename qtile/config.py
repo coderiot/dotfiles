@@ -84,9 +84,10 @@ keys = [
     Key([mod], "Tab",    lazy.nextlayout()),
     Key([mod], "w",      lazy.window.kill()),
 
-    # start specific apps
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod], "r", lazy.spawncmd(prompt="> ")),
+
+    # start specific apps
     Key(["mod4"], "o", lazy.spawn("opera")),
     Key(["mod4"], "f", lazy.spawn("firefox")),
     Key(["mod4"], "l", lazy.spawn("liferea")),
@@ -118,7 +119,7 @@ for i in groups:
 
 groups.extend([
     Group('music', layout='max', persist=False,
-          matches=[Match(title=['gmusicbrowser'])]),
+          matches=[Match(wm_class=['Parole'], title=['gmusicbrowser'])]),
     Group('web', layout='max',
           matches=[Match(wm_class=['Firefox',
                                    'google-chrome',
