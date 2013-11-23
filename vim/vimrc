@@ -1,11 +1,11 @@
+" no vi compability
+set nocompatible
 runtime bundle/pathogen/autoload/pathogen.vim
 " pathogen
 call pathogen#infect()
 call pathogen#incubate()
 call pathogen#helptags()
 
-" no vi compability
-set nocompatible
 
 " use utf8 as encoding
 set encoding=utf-8
