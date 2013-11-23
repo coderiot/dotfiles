@@ -1,0 +1,25 @@
+source $HOME/.vimrc
+
+" dont swap secrets
+set nobackup
+set noswapfile
+set nowritebackup
+set viminfo=
+set bufhidden=wipe
+
+" folding behaviour
+set foldlevel=0
+set foldminlines=1
+set foldmethod=indent
+set foldopen=""
+set foldclose=all
+
+" use blowfish crypto
+set cm=blowfish
+
+" creating random password
+map <Leader>pw :r!pwgen -ncs 20<CR>
+
+" closing encrypted file after 5 minutes of inactivity
+set updatetime=300000
+autocmd CursorHold * quit
