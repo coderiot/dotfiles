@@ -31,3 +31,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias pass='vim -u /home/peterr/dotfiles/vim/encrypt_vimrc /home/peterr/.secrets/secrets.wiki'
+
+# dont correct mv, cp, mkdir
+alias mv='nocorrect mv'
+alias cp='nocorrect cp'
+alias mkdir='nocorrect mkdir'
