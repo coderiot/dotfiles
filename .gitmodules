@@ -50,9 +50,6 @@
 [submodule "vim/bundle/vim-ipython"]
 	path = vim/bundle/vim-ipython
 	url = https://github.com/ivanov/vim-ipython.git
-[submodule "vim/bundle/zencoding"]
-	path = vim/bundle/zencoding
-	url = git://github.com/mattn/zencoding-vim.git
 [submodule "vim/bundle/fugitive"]
 	path = vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
