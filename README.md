@@ -20,7 +20,7 @@
  - [nerdtree](https://github.com/scrooloose/nerdtree.git) - file browser in sidebar
  - [syntastic](https://github.com/scrooloose/syntastic.git) - generic syntax checking plugin
  - [vim-ipython](https://github.com/ivanov/vim-ipython.git) - two-way integration between vim and ipython
- - [zencoding](https://github.com/mattn/zencoding-vim.git) - expanding abbreviations for html
+ - [emmet](https://github.com/mattn/emmet-vim) - expanding abbreviations for html
 
 ## Bash
 history search with Page-Up and Page-Down
