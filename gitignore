@@ -1,6 +1,7 @@
 # Python
 *.py[cod]
 .ropeproject
+venv/
 
 # C extensions
 *.so
