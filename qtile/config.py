@@ -85,7 +85,7 @@ keys = [
     Key([mod], "w",      lazy.window.kill()),
 
     Key([mod, "control"], "r", lazy.restart()),
-    Key([mod], "r", lazy.spawncmd(prompt="> ")),
+    Key([mod], "r", lazy.spawn("dmenu_run -fn 'DejaVu Sans Mono Book-14' -nb '#000000' -nf '#87FF03'")),
 
     # start specific apps
     Key(["mod4"], "o", lazy.spawn("opera")),
