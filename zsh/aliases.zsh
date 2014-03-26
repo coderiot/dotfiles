@@ -32,8 +32,10 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias pass='vim -u $HOME/dotfiles/vim/encrypt_vimrc $HOME/.secrets/secrets.wiki'
 
-# dont correct mv, cp, mkdir, pip
+# dont correct mv, cp, mkdir, pip, vim sudo
 alias mv='nocorrect mv'
 alias cp='nocorrect cp'
 alias pip='nocorrect pip'
 alias mkdir='nocorrect mkdir'
+alias vim='nocorrect vim'
+alias sudo='nocorrect sudo'
