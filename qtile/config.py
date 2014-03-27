@@ -191,9 +191,12 @@ screens = [
 ]
 
 main = None
+
 follow_mouse_focus = True
 cursor_warp = False
+
 floating_layout = layout.Floating(float_rules=[dict(wmclass='gnome-keyring-prompt-3')], **border)
 mouse = ()
+
 auto_fullscreen = True
 widget_defaults = {}
