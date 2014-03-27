@@ -85,7 +85,7 @@ keys = [
     Key([mod], "w",      lazy.window.kill()),
 
     Key([mod, "control"], "r", lazy.restart()),
-    Key([mod], "r", lazy.spawn("dmenu_run -fn 'DejaVu Sans Mono Book-14' -nb '#000000' -nf '#87FF03'")),
+    Key([mod], "r", lazy.spawn("dmenu_run -fn 'DejaVu Sans Mono Book-14' -nb '#000000' -nf '#87FF03' -sb '#87FF03' -sf '#000000'")),
 
     # start specific apps
     Key(["mod4"], "o", lazy.spawn("opera")),
@@ -148,7 +148,7 @@ layouts = [
     layout.MonadTall(**border),
     layout.Slice('right', 256,
                  name='pidgin',
-                 role='buddy_list',
+r                role='buddy_list',
                  fallback=layout.Stack(stacks=1)),
 ]
 
