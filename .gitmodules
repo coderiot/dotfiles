@@ -62,3 +62,6 @@
 [submodule "vim/bundle/emmet"]
 	path = vim/bundle/emmet
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "vim/bundle/i3-vim-syntax"]
+	path = vim/bundle/i3-vim-syntax
+	url = https://github.com/PotatoesMaster/i3-vim-syntax
