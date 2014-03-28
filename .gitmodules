@@ -65,3 +65,6 @@
 [submodule "vim/bundle/i3-vim-syntax"]
 	path = vim/bundle/i3-vim-syntax
 	url = https://github.com/PotatoesMaster/i3-vim-syntax
+[submodule "vim/bundle/vim-css-color"]
+	path = vim/bundle/vim-css-color
+	url = https://github.com/ap/vim-css-color.git

@@ -22,6 +22,7 @@
  - [vim-ipython](https://github.com/ivanov/vim-ipython.git) - two-way integration between vim and ipython
  - [emmet](https://github.com/mattn/emmet-vim) - expanding abbreviations for html
  - [i3-vim-syntax](https://github.com/PotatoesMaster/i3-vim-syntax) - syntax highlighting for i3 config file
+ - [vim-css-color](https://github.com/ap/vim-css-color) - underlays the hexadecimal CSS colorcodes with their real color
 
 ## Bash
 history search with Page-Up and Page-Down
