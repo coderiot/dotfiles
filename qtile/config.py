@@ -148,7 +148,7 @@ layouts = [
     layout.MonadTall(**border),
     layout.Slice('right', 256,
                  name='pidgin',
-r                role='buddy_list',
+                role='buddy_list',
                  fallback=layout.Stack(stacks=1)),
 ]
 
