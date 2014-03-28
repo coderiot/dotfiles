@@ -21,6 +21,7 @@
  - [syntastic](https://github.com/scrooloose/syntastic.git) - generic syntax checking plugin
  - [vim-ipython](https://github.com/ivanov/vim-ipython.git) - two-way integration between vim and ipython
  - [emmet](https://github.com/mattn/emmet-vim) - expanding abbreviations for html
+ - [i3-vim-syntax](https://github.com/PotatoesMaster/i3-vim-syntax) - syntax highlighting for i3 config file
 
 ## Bash
 history search with Page-Up and Page-Down
