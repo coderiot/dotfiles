@@ -233,8 +233,8 @@ let g:ipy_perform_mappings=0
 hi link EasyMotionTarget Directory
 
 " use easymotion like vimseek
-map s <Plug>(easymotion-fl)
-map S <Plug>(easymotion-Fl)
+map s <Plug>(easymotion-sl2)
+map S <Plug>(easymotion-Fl2)
 let g:EasyMotion_disable_two_key_combo = 1
 
 
