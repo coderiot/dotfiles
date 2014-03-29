@@ -8,7 +8,6 @@
  - [molokai](https://github.com/tomasr/molokai.git) - molokai color scheme
  - [supertab](https://github.com/ervandew/supertab.git) - insert completions with Tab
  - [tagbar](https://github.com/majutsushi/tagbar.git) - display tags in sidebar
- - [vimseek](https://github.com/goldfeld/vim-seek) - acting like f but with two characters
  - [easymotion](https://github.com/Lokaltog/vim-easymotion.git) - motions over lines
  - [markdown](https://github.com/tpope/vim-markdown.git) - mardown support
  - [nerdcommenter](https://github.com/scrooloose/nerdcommenter) - fast commenting
