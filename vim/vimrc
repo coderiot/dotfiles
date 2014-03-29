@@ -228,3 +228,14 @@ nnoremap <silent> <leader>gp :Git push<CR>
 
 " disable vim-ipython default mappings
 let g:ipy_perform_mappings=0
+
+" easymnotion settings
+hi link EasyMotionTarget Directory
+
+" use easymotion like vimseek
+map s <Plug>(easymotion-fl)
+map S <Plug>(easymotion-Fl)
+let g:EasyMotion_disable_two_key_combo = 1
+
+
+
