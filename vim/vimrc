@@ -237,5 +237,6 @@ map s <Plug>(easymotion-sl2)
 map S <Plug>(easymotion-Fl2)
 let g:EasyMotion_disable_two_key_combo = 1
 
-
+" load vims matchit plugin
+runtime macros/matchit.vim
 
