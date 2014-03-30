@@ -26,4 +26,5 @@ FontName=DejaVu Sans Mono 13
 ColorSelectionUseDefault=FALSE
 ColorBoldUseDefault=FALSE
 TitleMode=TERMINAL_TITLE_REPLACE
+Term=xterm-color
 
