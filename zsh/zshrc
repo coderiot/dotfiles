@@ -5,6 +5,8 @@ export DOTFILES=$HOME/dotfiles
 typeset -U config_files
 config_files=($DOTFILES/zsh/*.zsh)
 
+export PATH=$PATH:$HOME/bin
+
 # ZSH Configuration
 for file in ${(M)config_files:#$DOTFILES/zsh/*.zsh}
 do

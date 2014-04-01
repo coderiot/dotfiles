@@ -39,3 +39,5 @@ alias pip='nocorrect pip'
 alias mkdir='nocorrect mkdir'
 alias vim='nocorrect vim'
 alias sudo='nocorrect sudo'
+
+alias dmenu_xft="dmenu_run -fn 'DejaVu Sans Mono Book-14' -nb '#000000' -nf '#87FF03' -sb '#87FF03' -sf '#000000'"

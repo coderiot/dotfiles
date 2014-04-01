@@ -36,3 +36,5 @@ bind '"\e[5~": history-search-backward'
 bind '"\e[6~": history-search-forward'
 
 bind 'set completion-ignore-case on'
+
+alias dmenu_xft="dmenu_run -fn 'DejaVu Sans Mono Book-14' -nb '#000000' -nf '#87FF03' -sb '#87FF03' -sf '#000000'"
