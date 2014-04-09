@@ -30,7 +30,19 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias pass='vim -u $HOME/dotfiles/vim/encrypt_vimrc $HOME/.secrets/secrets.wiki'
+
+# pass find the first matching string
+pass() {
+    if [[ -z $1 ]]; then
+        vim -u $HOME/dotfiles/vim/encrypt_vimrc $HOME/.secrets/secrets.wiki
+    else
+    vim +/$1 -u $HOME/dotfiles/vim/encrypt_vimrc $HOME/.secrets/secrets.wiki
+    fi
+
+}
+
+# just for highlighting
+alias pass='pass "$@"'
 
 # dont correct mv, cp, mkdir, pip, vim sudo
 alias mv='nocorrect mv'
