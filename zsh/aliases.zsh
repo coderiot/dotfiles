@@ -2,6 +2,7 @@ alias v='vim'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias cdc="clear; cd"
 
 alias vim='vim --servername vim'
 alias pcat='pygmentize -f terminal256 -O style=monokai -g'

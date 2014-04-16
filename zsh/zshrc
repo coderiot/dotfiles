@@ -7,6 +7,9 @@ config_files=($DOTFILES/zsh/*.zsh)
 
 export PATH=$PATH:$HOME/bin
 
+# default editor
+export EDITOR="vim"
+
 # use zsh in vi mode
 bindkey -v
 
