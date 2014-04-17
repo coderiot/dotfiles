@@ -39,3 +39,6 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
+# virtualenvwarpper
+export WORKON_HOME=$HOME/workspace/envs
+source /usr/local/bin/virtualenvwrapper.sh
