@@ -66,3 +66,6 @@ alias pacrm='sudo pacman -R'
 alias pacrmd='sudo pacman -Rs'
 alias pacrep='pacman -Si'
 alias pacfind='pacman -Ss'
+
+# virtualenvwrapper
+alias mkenv="mkvirtualenv"
