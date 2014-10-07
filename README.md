@@ -22,6 +22,7 @@
  - [emmet](https://github.com/mattn/emmet-vim) - expanding abbreviations for html
  - [i3-vim-syntax](https://github.com/PotatoesMaster/i3-vim-syntax) - syntax highlighting for i3 config file
  - [vim-css-color](https://github.com/ap/vim-css-color) - underlays the hexadecimal CSS colorcodes with their real color
+ - [YankRing](https://github.com/vim-scripts/YankRing.vim) - maintains a history of previous yanks, changes and deletes
 
 ## Bash
 history search with Page-Up and Page-Down

@@ -16,3 +16,6 @@ venv/
 *.toc
 *.snm
 *.nav
+
+# yankring
+doc/tags
