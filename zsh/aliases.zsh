@@ -57,7 +57,7 @@ alias sudo='nocorrect sudo'
 alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}="mirage"
 
 # auto open pdf
-alias -s pdf='epdfview'
+alias -s pdf='zathura'
 
 # aliases for pacman
 alias pacupg='sudo pacman -Syu'
