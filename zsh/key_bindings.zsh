@@ -27,3 +27,11 @@ key[PageDown]=${terminfo[knp]}
 # history search bindings
 [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
+
+# vi mode with emacs keybindings (cmd mode)
+bindkey -M vicmd '^a'    beginning-of-line
+bindkey -M vicmd '^e'    end-of-line
+bindkey -M vicmd '^k'    kill-line
+bindkey -M vicmd '\ef'   forward-word                      # Alt-f
+bindkey -M vicmd '\eb'   backward-word                     # Alt-b
+bindkey -M vicmd '\ed'   kill-word                         # Alt-d
