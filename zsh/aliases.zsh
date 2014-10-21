@@ -52,12 +52,13 @@ alias pip='nocorrect pip'
 alias mkdir='nocorrect mkdir'
 alias vim='nocorrect vim'
 alias sudo='nocorrect sudo'
+alias locate='nocorrect locate'
 
 # auto open images
 alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}="mirage"
 
 # auto open pdf
-alias -s pdf='epdfview'
+alias -s pdf='zathura'
 
 # aliases for pacman
 alias pacupg='sudo pacman -Syu'

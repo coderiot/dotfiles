@@ -212,7 +212,7 @@ let g:vimwiki_list = [{'path_html':vimwiki_html_path,
                        \ 'template_path':vimwiki_html_path.'assets/',
                        \ 'template_default': 'default',
                        \ 'template_ext': '.tpl',
-                       \ 'auto_export': 0}]
+                       \ 'auto_export': 1}]
 
 " open Projects wiki (testing)
 map <Leader>wp <ESC>:VimwikiGoto workspace/index<CR>
