@@ -1,6 +1,8 @@
 " no vi compability
 set nocompatible
 runtime bundle/pathogen/autoload/pathogen.vim
+" disable nerdcommenter for tcomment
+let g:pathogen_disabled = ["nerdcommenter"]
 " pathogen
 call pathogen#infect()
 call pathogen#incubate()
