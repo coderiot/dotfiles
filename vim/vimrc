@@ -121,7 +121,7 @@ cnoreabbrev W w
 
 " Tab navigation
 nmap <C-t> :tabnew<CR>
-imap <C-t> <Esc>:tabnew<CR>i
+" imap <C-t> <Esc>:tabnew<CR>i
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 
