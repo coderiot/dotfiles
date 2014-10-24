@@ -45,7 +45,7 @@ set scrolloff=5
 syntax on
 
 " enable auto indentation
-"set autoindent
+" set autoindent
 set smartindent
 
 " use the appropriate number of spaces to insert a <Tab>
