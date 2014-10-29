@@ -147,7 +147,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     font pango:DejaVu Sans Mono Book, 12
-    status_command python ~/.i3/bar.py
+    status_command python3 ~/.i3/bar.py
     workspace_buttons yes
     colors{
         background #1B1B1E
