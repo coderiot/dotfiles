@@ -12,6 +12,13 @@ status = Status(standalone=True)
 status.register("clock",
                 format="%a %-d %b %X",)
 
+status.register("weather",
+                location_code="GMXX0007",
+                colorize=True,
+                interval=20,
+                format="{current_temp} / {current_wind}",
+                )
+
 # Shows pulseaudio default sink volume
 #
 # Note: requires libpulseaudio from PyPI
