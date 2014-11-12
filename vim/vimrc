@@ -15,8 +15,9 @@ set fileencoding=utf-8
 
 " appearance options
 set t_Co=256
+let g:molokai_original = 1
+let g:rehash256 = 1
 colorscheme molokai
-"colorscheme holokai
 
 " highlight current line
 set cursorline
