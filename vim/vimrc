@@ -3,6 +3,7 @@ set nocompatible
 runtime bundle/pathogen/autoload/pathogen.vim
 " disable nerdcommenter for tcomment
 let g:pathogen_disabled = ["nerdcommenter"]
+
 " pathogen
 call pathogen#infect()
 call pathogen#infect('bundle/{}')
@@ -15,8 +16,9 @@ set fileencoding=utf-8
 
 " appearance options
 set t_Co=256
+let g:molokai_original = 1
+let g:rehash256 = 1
 colorscheme molokai
-"colorscheme holokai
 
 " highlight current line
 set cursorline
@@ -238,6 +240,18 @@ hi link EasyMotionTarget Directory
 map s <Plug>(easymotion-sl2)
 map S <Plug>(easymotion-Fl2)
 let g:EasyMotion_disable_two_key_combo = 1
+
+" ctrlp settings
+nnoremap <leader>p :CtrlP<CR>
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_use_caching = 0
+
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 " load vims matchit plugin
 runtime macros/matchit.vim

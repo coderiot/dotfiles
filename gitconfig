@@ -13,3 +13,4 @@
 [alias]
 	st = status -s
 	ci = commit
+	co = checkout
