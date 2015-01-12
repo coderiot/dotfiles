@@ -199,10 +199,19 @@ hi SpellBad term=reverse ctermbg=89 guifg=#E6DB74
 hi SpellCap term=reverse ctermbg=166 guifg=#FD971F
 
 " Latex Box for continuous background compilation
-"let g:LatexBox_latexmk_options = '-pdf -pvc'
+let g:LatexBox_latexmk_async=1
+let g:LatexBox_latexmk_preview_continuously=1
 
 " use latexmkrc to make pdf out of svg with inkscape if missing
-let g:LatexBox_latexmk_options = '-use-make'
+" let g:LatexBox_latexmk_options = '-use-make'
+
+au! BufNewFile,BufRead *.tex set filetype=tex
+"
+" spell checking in .tex files
+set spelllang=de_de,en_gb
+au FileType tex setlocal spell
+au FileType tex let g:SuperTabDefaultCompletionType = "<c-n><c-p>"
+au FileType tex setlocal complete+=kspell
 
 " ignore hyperref warnings
 let g:LatexBox_ignore_warnings = [
