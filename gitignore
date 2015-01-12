@@ -9,6 +9,7 @@ venv/
 # Vim
 *.sw[po]
 .netrwhist
+vim/spell
 
 # Latex
 *.fdb_latexmk
