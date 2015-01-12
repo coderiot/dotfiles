@@ -212,6 +212,7 @@ set spelllang=de_de,en_gb
 au FileType tex setlocal spell
 au FileType tex let g:SuperTabDefaultCompletionType = "<c-n><c-p>"
 au FileType tex setlocal complete+=kspell
+nnoremap <leader>sp a<C-X><C-S>
 
 " ignore hyperref warnings
 let g:LatexBox_ignore_warnings = [
