@@ -201,6 +201,8 @@ hi SpellCap term=reverse ctermbg=166 guifg=#FD971F
 " Latex Box for continuous background compilation
 let g:LatexBox_latexmk_async=1
 let g:LatexBox_latexmk_preview_continuously=1
+let g:LatexBox_build_dir="build"
+let b:build_dir="build"
 
 " use latexmkrc to make pdf out of svg with inkscape if missing
 " let g:LatexBox_latexmk_options = '-use-make'
@@ -215,9 +217,9 @@ au FileType tex setlocal complete+=kspell
 nnoremap <leader>sp a<C-X><C-S>
 
 " ignore hyperref warnings
-let g:LatexBox_ignore_warnings = [
-      \ 'Package hyperref Warning',
-      \ ]
+" let g:LatexBox_ignore_warnings = [
+"       \ 'Package hyperref Warning',
+"       \ ]
 
 " vimwiki settings
 let vimwiki_path=$HOME.'/vimwiki/'
