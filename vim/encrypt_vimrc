@@ -15,10 +15,10 @@ set foldopen=""
 set foldclose=all
 
 " use blowfish crypto
-set cm=blowfish
+setlocal cm=blowfish2
 
 " creating random password
-map <Leader>pw :r!pwgen -ncs 20<CR>
+map <Leader>pw :r!pwgen -ncs 20<CR>kJ
 
 " closing encrypted file after 5 minutes of inactivity
 set updatetime=300000
