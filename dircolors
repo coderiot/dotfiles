@@ -80,9 +80,13 @@ STICKY 48;5;33;38;5;230 # dir with the sticky bit set (+t) and not other-writabl
 .taz 01;31
 .lzh 01;31
 .zip 01;31
+.rar 01;31
 .z   01;31
 .Z   01;31
 .gz  01;31
+.tar.gz  01;31
+.tar.bz2  01;31
+.bz2  01;31
 
 # Executables (Bright Green:82)
 EXEC 01;38;5;2 # Files with exec flag
@@ -121,6 +125,7 @@ EXEC 01;38;5;2 # Files with exec flag
 .midi   00;38;5;208
 .mka    00;38;5;208
 .mp3    00;38;5;208
+.m3u    00;38;5;208
 .mpc    00;38;5;208
 .ogg    00;38;5;208
 .ra     00;38;5;208
