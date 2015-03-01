@@ -79,3 +79,6 @@
 [submodule "vim/bundle/vim-snippets"]
 	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "zsh/prezto"]
+	path = zsh/prezto
+	url = git@github.com:coderiot/prezto.git
