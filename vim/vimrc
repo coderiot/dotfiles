@@ -1,14 +1,35 @@
 " no vi compability
+" Of course
 set nocompatible
-runtime bundle/pathogen/autoload/pathogen.vim
-" disable nerdcommenter for tcomment
-let g:pathogen_disabled = ["nerdcommenter"]
 
-" pathogen
-call pathogen#infect()
-call pathogen#infect('bundle/{}')
-call pathogen#helptags()
+" Required Vundle setup
+filetype off
+set runtimepath+=~/.vim/bundle/vundle
+call vundle#rc()
 
+Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'mattn/emmet-vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'PotatoesMaster/i3-vim-syntax'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'LaTeX-Box-Team/LaTeX-Box'
+Bundle 'tpope/vim-markdown'
+Bundle 'tomasr/molokai'
+Bundle 'scrooloose/nerdtree'
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'ap/vim-css-color'
+Bundle 'ivanov/vim-ipython'
+Bundle 'honza/vim-snippets'
+Bundle 'vim-scripts/vimwiki'
+Bundle 'vim-scripts/YankRing.vim'
 
 " use utf8 as encoding
 set encoding=utf-8
