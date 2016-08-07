@@ -12,24 +12,27 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'mattn/emmet-vim'
-Bundle 'tpope/vim-fugitive'
 Bundle 'PotatoesMaster/i3-vim-syntax'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
 Bundle 'tpope/vim-markdown'
-Bundle 'tomasr/molokai'
-Bundle 'scrooloose/nerdtree'
-Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'tomasr/molokai'
+Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 Bundle 'ap/vim-css-color'
 Bundle 'ivanov/vim-ipython'
-Bundle 'honza/vim-snippets'
 Bundle 'vim-scripts/vimwiki'
 Bundle 'vim-scripts/YankRing.vim'
+Bundle 'mhinz/vim-signify'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 
 " use utf8 as encoding
 set encoding=utf-8
@@ -96,6 +99,9 @@ nnoremap Y y$
 
 " backspacing over indent, end-of-line and linestart in insert mode
 set backspace=indent,eol,start
+
+" always show statusline
+set laststatus=2
 
 " Enable filetype plugin
 filetype plugin on
@@ -289,3 +295,10 @@ nnoremap <Down> :echoe "Use j"<CR>
 " load vims matchit plugin
 runtime macros/matchit.vim
 
+" signify settings
+let g:signify_vcs_list = [ 'git', 'hg' ]
+let g:signify_update_on_focusgained = 1
+
+" airline settings
+let g:airline_theme='term'
+let g:airline_powerline_fonts = 1
