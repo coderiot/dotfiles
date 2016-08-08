@@ -283,10 +283,12 @@ map S <Plug>(easymotion-Fl2)
 let g:EasyMotion_disable_two_key_combo = 1
 
 " ctrlp settings
-nnoremap <leader>p :CtrlP<CR>
+" nnoremap <leader>p :CtrlP<CR>
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_use_caching = 0
+let g:ctrlp_use_caching = 1
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
