@@ -306,3 +306,6 @@ let g:signify_update_on_focusgained = 1
 " airline settings
 let g:airline_theme='term'
 let g:airline_powerline_fonts = 1
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tabs = 1
