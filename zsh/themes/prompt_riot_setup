@@ -1,0 +1,84 @@
+#
+# A simple theme that displays:
+#   - Python virtual environment.
+#   - Git branch.
+#   - Git state.
+#   - Last command exit state (smiley/X).
+#
+# Authors:
+#   Nadav Shatz <nadavshatz@gmail.com>
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#   coderiot <coderiot@zoho.com>
+#
+# Screenshots:
+#   http://i.imgur.com/ijycV6n.png
+#
+
+# Load dependencies.
+pmodload 'helper'
+
+
+function prompt_riot_precmd {
+  unsetopt XTRACE KSH_ARRAYS
+
+  # Get Git repository information.
+  if (( $+functions[git-info] )); then
+    git-info
+  fi
+
+  # Get Python environment information.
+  if (( $+functions[python-info] )); then
+    python-info
+  fi
+
+  # Get Ruby version information.
+  if (( $+functions[ruby-info] )); then
+    ruby-info
+  fi
+}
+
+function prompt_riot_setup {
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(percent subst)
+
+  # Add hook for calling git-info before each command.
+  add-zsh-hook precmd prompt_riot_precmd
+
+  # Set editor-info parameters.
+  zstyle ':prezto:module:editor:info:completing' format '%B%F{red}...%f%b'
+
+  # Set python-info parameters.
+  zstyle ':prezto:module:python:info:virtualenv' format '%F{yellow}[%v]%f '
+
+  # Set ruby-info parameters.
+  zstyle ':prezto:module:ruby:info:version' format '%F{yellow}[%v]%f '
+
+  # Set git-info parameters.
+  zstyle ':prezto:module:git:info:keys' format \
+    'prompt' '%F{cyan}[%b%D%F{cyan}] ' \
+    'rprompt' '%A%B%S%a%d%m%r%U%u'
+
+  # Set git-info parameters.
+  zstyle ':prezto:module:git:info' verbose 'yes'
+  zstyle ':prezto:module:git:info:action' format ':%%B%F{yellow}%s%f%%b'
+  zstyle ':prezto:module:git:info:added' format ' %%B%F{green}●%f%%b'
+  zstyle ':prezto:module:git:info:ahead' format ' %%B%F{yellow}⬆%f%%b'
+  zstyle ':prezto:module:git:info:behind' format ' %%B%F{yellow}⬇%f%%b'
+  zstyle ':prezto:module:git:info:branch' format '%F{green}%b%f'
+  zstyle ':prezto:module:git:info:commit' format ':%F{green}%.7c%f'
+  zstyle ':prezto:module:git:info:deleted' format ' %%B%F{red}✖%f%%b'
+  zstyle ':prezto:module:git:info:modified' format ' %%B%F{yellow}●%f%%b'
+  zstyle ':prezto:module:git:info:position' format ':%F{red}%p%f'
+  zstyle ':prezto:module:git:info:renamed' format ' %%B%F{magenta}➜%f%%b'
+  zstyle ':prezto:module:git:info:stashed' format ' %%B%F{cyan}✭%f%%b'
+  zstyle ':prezto:module:git:info:unmerged' format ' %%B%F{yellow}═%f%%b'
+  zstyle ':prezto:module:git:info:untracked' format ' %%B%F{red}●%f%%b'
+
+  # Define prompts.
+  # PROMPT='$python_info[virtualenv]$ruby_info[version]%F{red}%n%F{gray}  Ⓐ  %F{green}%m %B%F{magenta}%c%b ${git_info:+${(e)git_info[prompt]}}%(?:%F{cyan}%%:%F{red}✖%f) '
+  PROMPT='$python_info[virtualenv]$ruby_info[version]%F{red}%n%F{gray}Ⓐ%F{green}%m %B%F{magenta}%c%b ${git_info:+${(e)git_info[prompt]}}%(?:%F{cyan}%%:%F{red}✖%f) '
+  RPROMPT='${editor_info[overwrite]}${VIM:+" %B%F{green}V%f%b"}${git_info[rprompt]}'
+  SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
+}
+
+prompt_riot_setup "$@"
