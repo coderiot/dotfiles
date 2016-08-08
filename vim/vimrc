@@ -33,6 +33,9 @@ Bundle 'mhinz/vim-signify'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 
+" removed plugins
+" Bundle 'vim-scripts/YankRing.vim'
+
 " use utf8 as encoding
 set encoding=utf-8
 set fileencoding=utf-8
@@ -194,7 +197,7 @@ let NERDTreeIgnore=['\.pyc$', '\.pyo$']
 " tagbar settings
 let g:tagbar_width = 25
 let g:tagbar_autoclose=1
-let g:tagbar_left=1
+let g:tagbar_left=0
 let g:tagbar_foldlevel=0
 " Don't sort tags by name
 let g:tagbar_sort = 0
